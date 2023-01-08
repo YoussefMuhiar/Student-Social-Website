@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>View Exchange List</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>
+    <table class="table">
+        <thead>
+            <li><a href="#" onclick="window.location.href = 'Market.html';">Back to marketplace</a></li>
+            <li><a href="#" onclick="window.location.href = 'homepage.html';">Back to home page</a></li>
+            <th>Exchange Form</th>
+            <th>Textbook</th>
+            <th>Price</th>
+        </thead>
+        <tbody id="tbody1"></tbody>
+    </table>
+
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
+
+    <script id="MainScript">
+        const firebaseConfig = {
+            apiKey: "AIzaSyAyChoONXC-eWk92CZVDupbTvQSjDK2uEQ",
+            authDomain: "marketexchange-e5dc7.firebaseapp.com",
+            projectId: "marketexchange-e5dc7",
+            storageBucket: "marketexchange-e5dc7.appspot.com",
+            messagingSenderId: "262549766486",
+            appId: "1:262549766486:web:b03cd674bf9f4354ed16f7"
+        };
+
+        firebase.initializeApp(firebaseConfig);
+        let db = firebase.firestore();
+
+        function fetchDataOneTime(){
+            db.collection("Eform").get().then((querySnapshot)=>{
+                var tutor = [];
+                querySnapshot.forEach(doc => {
+                    tutor.push(doc.data());
+                });
+                addAllItemsToTable(tutor);
+            });
+        }
+
+        function fetchDataNow(){
+            db.collection("Eform").onSnapshot((querySnapshot)=>{
+                var tutor = [];
+                querySnapshot.forEach(doc => {
+                    tutor.push(doc.data());
+                });
+                addAllItemsToTable(tutor);
+            });
+        }
+
+        var stdNumber = 0;
+        var tbody = document.getElementById('tbody1');
+
+        function addItemToTable(title, details){
+            var trow = document.createElement('tr');
+            var td1 = document.createElement('td');
+            var td2 = document.createElement('td');
+            var td3 = document.createElement('td');
+
+            td1.innerHTML = ++stdNumber;
+            td2.innerHTML = title;
+            td3.innerHTML = details;
+
+            trow.appendChild(td1);
+            trow.appendChild(td2);
+            trow.appendChild(td3);
+
+            tbody.appendChild(trow);
+        }
+
+        function addAllItemsToTable(clubDocsList){
+            stdNumber = 0;
+            tbody.innerHTML="";
+            clubDocsList.forEach(element => {
+                addItemToTable(element.title, element.details);
+            });
+        }
+
+        window.onload = fetchDataOneTime;
+    </script>
+
+</body>
+
+</html>

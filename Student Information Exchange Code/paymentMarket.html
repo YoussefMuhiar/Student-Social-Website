@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset = "UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="CSS/pay.css">
+    <title>Payment</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,600,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,600,0,0" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+</head>
+<body>
+    <div class="container">
+        <form action="">
+
+            <div class="row">
+                <div class="col">
+                    <h3 class="title">Shipping Address</h3>
+
+                    <div class="inputBox">
+                        <span>Full Name :</span>
+                        <input type="text" id="title" name="title" placeholder="Ex: Jonh Smith">
+                    </div>  
+
+                    <div class="inputBox">
+                        <span>Student Email :</span>
+                        <input type="text" id="title" name="title" placeholder="Ex: abc123@mavs.uta.edu">
+                    </div>  
+                    
+                    <div class="inputBox">
+                        <span>Address :</span>
+                        <input type="text" id="title" name="title" placeholder="Ex: 701 S Nedderman Dr">
+                    </div> 
+
+                    <div class="inputBox">
+                        <span>City :</span>
+                        <input type="text" id="title" name="title" placeholder="Ex: Arlington">
+                    </div>
+
+                    <div class="flex">
+                        <div class="inputBox">
+                            <span>State :</span>
+                            <input type="text" id="title" name="title" placeholder="Ex: Texas">
+                        </div>
+
+                        <div class="inputBox">
+                            <span>Zip code :</span>
+                            <input type="text" id="title" maxlength="5" name="title" placeholder="Ex: 76019">
+                        </div>
+                </div>
+            </div>
+
+            <div class="col">
+                    <h3 class="title">Payment</h3>
+
+                    <div class="inputBox">
+                        <span>Cards Accepted:</span>
+                        <img src="credit-card-logos.png" alt="" class="card-img">
+                    </div>
+
+                    <div class="inputBox">
+                        <span>Name on Card :</span>
+                        <input type="text" id="title" name="title" placeholder="Ex: Jonh Smith">
+                    </div>
+
+                    <div class="inputBox">
+                        <span>Credit Card Number :</span>
+                        <input type="text" maxlength="16" id="title" name="title" placeholder="Ex: 1111222233334444">
+                    </div>
+
+                    <div class="flex">
+                        <div class="inputBox">
+                            <span>Exp Month :</span>
+                            <select name="" id="" class="month-input">
+                                <option value="Month" selected disabled>Month</option>
+                                <option value="01">01</option>
+                                <option value="02">02</option>
+                                <option value="03">03</option>
+                                <option value="04">04</option>
+                                <option value="05">05</option>
+                                <option value="06">06</option>
+                                <option value="07">07</option>
+                                <option value="08">08</option>
+                                <option value="09">09</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                            </select> 
+                        </div>
+    
+                        <div class="inputBox">
+                            <span>Exp Year :</span>
+                            <select name="" id="title" class="year-input">
+                                <option value="Year" selected disabled>Year</option>
+                                <option value="2022">2022</option>
+                                <option value="2023">2023</option>
+                                <option value="2024">2024</option>
+                                <option value="2025">2025</option>
+                                <option value="2026">2026</option>
+                                <option value="2027">2027</option>
+                                <option value="2028">2028</option>
+                                <option value="2029">2029</option>
+                                <option value="2030">2030</option>
+                                <option value="2031">2031</option>
+                                <option value="2032">2032</option>
+                                <option value="2023">2033</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="inputBox">
+                        <span>CVV :</span>
+                        <input type="text" maxlength="4" id="title" name="title" placeholder="Ex: 000">
+                    </div>
+                </div>
+
+            <button id="checkout-button" class="submit-btn">Confirm</button>               
+            <button type="back" id="back" onclick="window.location.href = 'Market.html';">Back</button>
+            <button type="home" id="home" onclick="window.location.href = 'homepage.html';">Home</button>
+        </form>
+    </div>
+    
+    <script src="confirmpayment.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js"></script>
+    
+</body>
+
+</html>
