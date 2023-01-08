@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset = "UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="CSS/stylecart.css">
+    <title>Marketplace</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,600,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,600,0,0" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+</head>
+
+<body>  
+    <main>  
+        <div class="big-wrapper">
+            <header>
+                <div class="container">
+                    <div class="logo" onclick="window.location.href='homepage.html';">
+                        <img src="./logo.png" alt="Logo">
+                        <h2>SIE</h2>
+                    </div>
+                    <div class="links">
+                        <ul>
+                            <li><a href="#" onclick="window.location.href='tutoringNavigation.html';">Tutoring Services</a></li>
+                            <li><a href="#" onclick="window.location.href='clubNavigation.html';">Clubs and Organizations</a></li>
+                            <li><a href="#" onclick="window.location.href='Market.html';">Marketplace</a></li>
+                            <li><a href="#" onclick="window.location.href='communityFeed.html';">Community Feed</a></li>
+                        </ul>
+                    </div>    
+    
+                    <div class="chat-box">
+                        <button type="button" class="icon-button">
+                            <i class='bx bx-message-alt'></i>
+                            <span class="icon-button__badge"></span>
+                        </button>
+                    </div>                 
+                    
+                    <div class="Shop-box">
+                        <button type="button" class="Shop-button">
+                            <i class='bx bx-shopping-bag' id="cart-icon"></i>
+                            <span class="icon-button__badge"></span>
+                         </button>
+                    </div>  
+    
+                    <div class="search-box">
+                        <input class="search-txt" type="text" name="" placeholder="Type to search">
+                        <a class="search-btn" href="#">
+                            <i class='bx bx-search'></i>
+                        </a>
+                    </div> 
+
+                    <div class="cart">
+                        <h2 class="cart-title">Your Cart</h2>
+                        <div class="cart-content"></div>
+                        <div class="total">
+                            <div clas="total-title">Total</div>
+                            <div class="total-price">$0</div>
+                        </div>
+
+                        <button type="button" class="btn-buy" id="checkout-button" onclick="window.location.href='paymentMarket.html';">Buy Now</button>
+            
+                        <i class='bx bx-x' id="close-cart"></i>
+                    </div>
+                </div>  
+            </header>
+        </div>
+
+        <section class="shop container">
+            
+            <h3 class="section-title">Shop</h3>
+            <button type="button" id="Add" onclick="window.location.href='Sform.html';">Add Item for Sell</button>
+            <button type="button" id="Add" onclick="window.location.href='viewSform.html';">View Item(s) for Selling</button>
+            
+            <div class="shop-content">
+
+                <div class="product-box">
+                    <img src="table.jpg" alt="" width: 400px; height: 400px; class="product-img">
+                    <h2 class="product-title">table</h2>
+                    <span class="price">$25</span>
+                    <i class='bx bx-shopping-bag add-cart' ></i>
+                </div>
+
+                <div class="product-box">
+                    <img src="couch.jpg" alt="" width: 400px; height: 400px; class="product-img">
+                    <h2 class="product-title">Couch</h2>
+                    <span class="price">$50</span>
+                    <i class='bx bx-shopping-bag add-cart' ></i>
+                </div>
+
+                <div class="product-box">
+                    <img src="Mirror.jpg" alt="" width: 400px; height: 400px; class="product-img">
+                    <h2 class="product-title">Mirror</h2>
+                    <span class="price">$80</span>
+                    <i class='bx bx-shopping-bag add-cart' ></i>
+                 </div>
+
+                <div class="product-box">
+                    <img src="lamp.jpg" alt="" width: 400px; height: 400px; class="product-img">
+                    <h2 class="product-title">Lamp</h2>
+                    <span class="price">$20</span>
+                    <i class='bx bx-shopping-bag add-cart' ></i>
+                </div> 
+
+                <div class="product-box">
+                    <img src="car.jpg" alt="" width: 400px; height: 400px; class="product-img">
+                    <h1 class="product-title">car</h1>
+                    <span class="price">$1</span>
+                    <i class='bx bx-shopping-bag add-cart' ></i>
+                </div>
+            </div>
+        </section>
+        <section class="Lending container">
+            <h3 class="section-title">Lend</h3>
+            <button type="button" id="Add" onclick="window.location.href='Lform.html';">Add Item for Lending</button>
+            <button type="button" id="Add" onclick="window.location.href='viewLform.html';">View Item(s) for Lending</button>
+            
+            <div class="shop-content">
+
+                <div class="product-box">
+                    <img src="img2.jpg" alt="" class="product-img">
+                    <h2 class="product-title">img2</h2>
+                    <span class="price">$0</span>
+                    <i class='bx bx-shopping-bag add-cart'></i>
+                </div>
+
+                <div class="product-box">
+                    <img src="img2.jpg" alt="" class="product-img">
+                    <h2 class="product-title">img2</h2>
+                    <span class="price">$0</span>
+                    <i class='bx bx-shopping-bag add-cart' ></i>
+                </div>
+
+                <div class="product-box">
+                    <img src="img2.jpg" alt="" class="product-img">
+                    <h2 class="product-title">img2</h2>
+                    <span class="price">$0</span>
+                    <i class='bx bx-shopping-bag add-cart' ></i>
+                </div>
+
+                <div class="product-box">
+                    <img src="img2.jpg" alt="" class="product-img">
+                    <h2 class="product-title">img2</h2>
+                    <span class="price">$0</span>
+                    <i class='bx bx-shopping-bag add-cart' ></i>
+                </div>
+
+                <div class="product-box">
+                    <img src="img2.jpg" alt="" class="product-img">
+                    <h1 class="product-title">img2</h1>
+                    <span class="price">$0</span>
+                    <i class='bx bx-shopping-bag add-cart' ></i>
+                </div>
+            </div>
+        </section>
+
+        <section class="Exchange container">
+            <h3 class="section-title">Exchange</h3>
+            <button type="button" id="Add" onclick="window.location.href='Eform.html';">Add Item for Exchange</button>
+            <button type="button" id="Add" onclick="window.location.href='viewEform.html';">View Item(s) for Exchange</button>
+            
+            <div class="shop-content">
+
+                <div class="product-box">
+                    <img src="img2.jpg" alt="" class="product-img">
+                    <h2 class="product-title">img2</h2>
+                    <span class="price">$0</span>
+                    <i class='bx bx-message-alt chat-icon'></i>
+                </div>
+
+                <div class="product-box">
+                    <img src="img2.jpg" alt="" class="product-img">
+                    <h2 class="product-title">img2</h2>
+                    <span class="price">$0</span>
+                    <i class='bx bx-message-alt chat-icon'></i>
+                </div>
+
+                <div class="product-box">
+                    <img src="img2.jpg" alt="" class="product-img">
+                    <h2 class="product-title">img2</h2>
+                    <span class="price">$0</span>
+                    <i class='bx bx-message-alt chat-icon'></i>
+                </div>
+
+                <div class="product-box">
+                    <img src="img2.jpg" alt="" class="product-img">
+                    <h2 class="product-title">img2</h2>
+                    <span class="price">$0</span>
+                    <i class='bx bx-message-alt chat-icon'></i>
+                </div>
+
+                <div class="product-box">
+                    <img src="img2.jpg" alt="" class="product-img">
+                    <h1 class="product-title">img2</h1>
+                    <span class="price">$0</span>
+                    <i class='bx bx-message-alt chat-icon'></i>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="./main2.js"></script> 
+</body>
+</html>

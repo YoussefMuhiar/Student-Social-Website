@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seek Tutoring</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>
+    <table class="table">
+        <thead>
+            <li><a href="#" onclick="window.location.href = 'tutoringNavigation.html';">Back to tutoring services page</a></li>
+            <li><a href="#" onclick="window.location.href = 'homepage.html';">Back to home page</a></li>
+            <th>Tutor</th>
+            <th>First name</th>
+            <th>Last name</th>
+            <th>Time</th>
+            <th>Fee</th>
+            <th>Subject</th>
+        </thead>
+        <tbody id="tbody1" onclick="window.location.href='payment.html';"></tbody>
+    </table>
+    <img src = "Advertisement4.gif" onclick="window.location.href = 'https://www.uta.edu/student-affairs/student-pubs/work';"
+                        style="object-fit:scale-down;
+                                width:1900px;
+                                height:150px;"/>
+
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
+
+    <script id="MainScript">
+        const firebaseConfig = {
+            apiKey: "AIzaSyCmCr9-Crp8VgQ6Tu-rsJkKBcm7f-jK4QM",
+            authDomain: "tutor-65e34.firebaseapp.com",
+            projectId: "tutor-65e34",
+            storageBucket: "tutor-65e34.appspot.com",
+            messagingSenderId: "160690615632",
+            appId: "1:160690615632:web:3f00a8d54f886152282855"
+        };
+
+        firebase.initializeApp(firebaseConfig);
+        let db = firebase.firestore();
+
+        function fetchDataOneTime(){
+            db.collection("offerTutoringOfficial").get().then((querySnapshot)=>{
+                var tutor = [];
+                querySnapshot.forEach(doc => {
+                    tutor.push(doc.data());
+                });
+                addAllItemsToTable(tutor);
+            });
+        }
+
+        function fetchDataNow(){
+            db.collection("offerTutoringOfficial").onSnapshot((querySnapshot)=>{
+                var tutor = [];
+                querySnapshot.forEach(doc => {
+                    tutor.push(doc.data());
+                });
+                addAllItemsToTable(tutor);
+            });
+        }
+
+        var stdNumber = 0;
+        var tbody = document.getElementById('tbody1');
+
+        function addItemToTable(fn, ln, t, f, s){
+            var trow = document.createElement('tr');
+            var td1 = document.createElement('td');
+            var td2 = document.createElement('td');
+            var td3 = document.createElement('td');
+            var td4 = document.createElement('td');
+            var td5 = document.createElement('td');
+            var td6 = document.createElement('td');
+
+            td1.innerHTML = ++stdNumber;
+            td2.innerHTML = fn;
+            td3.innerHTML = ln;
+            td4.innerHTML = t;
+            td5.innerHTML = f;
+            td6.innerHTML = s;
+
+            trow.appendChild(td1);
+            trow.appendChild(td2);
+            trow.appendChild(td3);
+            trow.appendChild(td4);
+            trow.appendChild(td5);
+            trow.appendChild(td6);
+
+            tbody.appendChild(trow);
+        }
+
+        function addAllItemsToTable(tutorDocsList){
+            stdNumber = 0;
+            tbody.innerHTML="";
+            tutorDocsList.forEach(element => {
+                addItemToTable(element.fname, element.lname, element.time, element.fees, element.subject);
+            });
+        }
+
+        window.onload = fetchDataOneTime;
+    </script>
+
+</body>
+
+</html>

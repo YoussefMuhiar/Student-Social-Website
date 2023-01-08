@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styleMakeClub.css">
+  <title>Form Club</title>
+</head>
+
+<body>
+
+  <div>
+    <form id="clearFrom">
+      <p style="text-align:center">Form Club</p>
+
+      <label for="category"><br>Club category</label>
+      <select id="category" name="category">
+        <option value="Club">Select your club category...</option>
+        <option value="Academic Associations">Academic Associations</option>
+        <option value="Cultural/International">Cultural/International</option>
+        <option value="Honors/Recognition Societies">Honors/Recognition Societies</option>
+        <option value="Professional Societies">Professional Societies</option>
+        <option value="Recreational/Sports">Recreational/Sports</option>
+        <option value="Religious">Religious</option>
+        <option value="Social Fraternities/Sororities">Architecture</option>
+        <option value="Special Interest">Special Interest</option>
+      </select>
+
+      <label for="title">Club title</label>
+      <input type="text" id="title" name="title" placeholder="Enter your club title">
+
+      <label for="details">Club details</label>
+      <input type="text" id="details" name="details" placeholder="Enter your club details">
+
+      <button type="submit" id="submit">Submit</button>
+      <button type="back" id="back" onclick="window.location.href = 'clubNavigation.html';">Back</button>
+      <button type="home" id="home" onclick="window.location.href = 'homepage.html';">Home Page</button>
+    </form>
+  </div>
+  <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
+  <script src="makeClubFunctionality.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+<head>
+    <meta charset = "UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="CSS/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <link rel="stylesheet" href="menuStyle.css">
+
+    <script src="https://kit.fontawesome.com/d174d3b7a9.js" crossorigin="anonymous"></script>
+    <title>Home</title>
+</head>
+<body>
+    <main>
+        <div class="big-wrapper">
+            <header>
+                <div class="container">
+                    <div class="logo" onclick="window.location.href = 'homepage.html';">
+                        <img src="./logo.png" alt="Logo" onclick="window.location.href = 'homepage.html';">
+                        <h3 onclick="window.location.href = 'homepage.html';">Student Information Exchange</h3>
+                    </div>
+
+                    <div class="links">
+                        <ul>
+                            <li><a href="#" onclick="window.location.href = 'tutoringNavigation.html';">Tutoring Services</a></li>
+                            <li><a href="#" onclick="window.location.href = 'clubNavigation.html';">Form Club</a></li>
+                            <li><a href="#" onclick="window.location.href = 'Market.html';">Student Market</a></li>
+                            <li><a href="#" onclick="window.location.href = 'communityFeed.html';">Feed</a></li>
+                        </ul>
+                    </div>    
+
+                    <div class="chat-box">
+                        <button type="button" class="icon-button" onclick="clickInbox()">
+                            <span class="material-icons">notifications </span>
+                            <span class="icon-button__badge"></span>
+                        </button>
+                       
+                    </div>   
+
+                    <div class="search-box">
+                        <input class="search-txt" type="text" name="" placeholder="Type to search">
+                        <a class="seach-btn" href="#">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </a>
+                    </div>      
+
+            </header>
+        </div>
+
+    <body>
+        <div class="container">
+            <div class="menu-box" id="menu">
+                <h1 class="form__title">Tutoring Services</h1>
+                <div class="menu-links">
+                    <a href="#" onclick="window.location.href = 'offerTutoring.html';">Offer tutoring services</a>
+                    <a href="#" onclick="window.location.href = 'seekTutoring.html';">Seek tutoring services</a>
+                    <a href="#" onclick="window.location.href = 'homepage.html';">Back</a>
+                    <img src = "Advertisement2.jpg" onclick="window.location.href = 'https://www.uta.edu/campus-ops/housing';"
+                        style="object-fit:scale-down;
+                                width:1325px;
+                                height:200px;"/>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
